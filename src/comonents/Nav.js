@@ -17,6 +17,7 @@ const Nav = () => {
   font-wieght: bold;
   text-decoration: none;
   color: white;
+  transition: color 0.3s ease-in-out;
   &:hover {
     color:pink;
   }
@@ -24,7 +25,7 @@ const Nav = () => {
   return (
     <Header>
       <Nav>
-        <StyledLink to="/">Home</StyledLink>
+        <StyledLink to="/">About</StyledLink>
         <StyledLink to="/contact">Contact</StyledLink>
         <StyledLink to="/projects">Projects</StyledLink>
       </Nav>
