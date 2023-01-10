@@ -97,7 +97,9 @@ const About = () => {
           <br /> the world of programming offers endless intellectual curiosity
           and exploration. <br />
           <br />
-          Here are some of the technologies I am now proficient with:
+          <strong>
+            Here are some of the technologies I am now proficient with:
+          </strong>
         </Para>
         <TechStack />
         <br />
