@@ -6,6 +6,8 @@ import Paramedic from '../assets/paramedic.jpg'
 import MeowWolf from '../assets/meowwolf.jpg'
 import styled, {keyframes} from "styled-components";
 import TechStack from "../comonents/TechStack";
+import Contact from "../comonents/Contact";
+
 
 
 const About = () => {
@@ -102,6 +104,7 @@ const About = () => {
         And I am learning more everyday! Checkout my recent work{" "}
         <Link to="/projects">here!</Link>
       </section>
+      <Contact />
     </Page>
   );
 };

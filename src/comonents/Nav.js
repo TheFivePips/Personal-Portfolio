@@ -26,7 +26,6 @@ const Nav = () => {
     <Header>
       <Nav>
         <StyledLink to="/">About</StyledLink>
-        <StyledLink to="/contact">Contact</StyledLink>
         <StyledLink to="/projects">Projects</StyledLink>
       </Nav>
     </Header>
