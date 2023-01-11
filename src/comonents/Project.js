@@ -56,11 +56,11 @@ const Project = ({title, src, summary, tech, codelink, demolink}) => {
     `;
     const DemoLink = styled.a`
         grid-area: 7/2/8/3;
-        margin: 1rem 1rem;
+        margin: 1rem 3rem;
 
     `;
-    const frontTech = tech.slice(0,Math.round(tech.length/2))
-    const backTech = tech.slice(tech.length/2)
+    const frontTech = tech.slice(0,Math.round((tech.length/2)))
+    const backTech = tech.slice(Math.round(tech.length/2))
     console.log(frontTech);
 
     console.log(backTech);
@@ -83,7 +83,7 @@ const Project = ({title, src, summary, tech, codelink, demolink}) => {
             ))}
         </List2>
         <CodeLink href={codelink}>See the Code</CodeLink>
-        <DemoLink href={demolink}>Live Demo coming soon</DemoLink>
+        <DemoLink href={demolink}>Live Demo</DemoLink>
       </Project>
     );
 }
