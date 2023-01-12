@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Nav = () => {
 
-  const Header = styled.header`
+  const Header = styled(motion.header)`
     margin: 1rem;
   `;
   const Nav = styled.nav`
@@ -21,9 +22,22 @@ const Nav = () => {
   &:hover {
     color:pink;
   }
+
   `
   return (
-    <Header>
+    <Header
+      initial={{
+        opacity: 0,
+        y: -200
+      }}
+      animate={{
+        opacity: 1,
+        y: 0
+      }}
+      transition={{
+        duration: 0.3
+      }}
+    >
       <Nav>
         <StyledLink to="/">About</StyledLink>
         <StyledLink to="/projects">Projects</StyledLink>

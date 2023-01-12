@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const TechStack = () => {
 
+  // should probably refactor to use grid and autofill/ minmax so if I add more it will automatically be able to resize and still be responsive
   const StackContainer = styled.div`
     width: 80vw;
     display: flex;
@@ -10,73 +12,80 @@ const TechStack = () => {
     justify-content: space-around;
     margin: 1rem;
   `;
-  const IconContainer = styled.div`
+  const IconContainer = styled(motion.div)`
     display: flex;
     flex-direction: column;
     margin 4rem;
     text-align: center;
     width: 5rem;
+    :hover {
+        transform: scale(1.2);
+        text-shadow: 0 0 4px white;
+      }
+    i {
+      font-size: 4rem;
+      margin: 0.5rem;
+      
+    }
   `;
- const styles ={
-  fontSize: "4rem",
-  margin: "0.5rem"
- }
 
+
+//  should add in jest
   return (
     <StackContainer>
       <div className="col-1">
         <IconContainer>
-          <i class="devicon-html5-plain colored" style={styles}></i>
+          <i class="devicon-html5-plain colored" ></i>
           <span>HTML5</span>
         </IconContainer>
         <IconContainer>
-          <i class="devicon-css3-plain colored" style={styles}></i>
+          <i class="devicon-css3-plain colored" ></i>
           <span>CSS</span>
         </IconContainer>
         <IconContainer>
-          <i class="devicon-javascript-plain colored" style={styles}></i>
+          <i class="devicon-javascript-plain colored"></i>
           <span>JavaScript</span>
         </IconContainer>
       </div>
       <div className="col-2">
         <IconContainer>
-          <i class="devicon-react-original colored" style={styles}></i>
+          <i class="devicon-react-original colored"></i>
           <span>React</span>
         </IconContainer>
         <IconContainer>
-          <i class="devicon-express-original" style={styles}></i>
+          <i class="devicon-express-original"></i>
           <span>Express</span>
         </IconContainer>
         <IconContainer>
-          <i class="devicon-mongodb-plain colored" style={styles}></i>
+          <i class="devicon-mongodb-plain colored"></i>
           <span>MongoDB</span>
         </IconContainer>
       </div>
       <div className="col-3">
         <IconContainer>
-          <i class="devicon-nodejs-plain colored" style={styles}></i>
+          <i class="devicon-nodejs-plain colored"></i>
           <span>Node</span>
         </IconContainer>
         <IconContainer>
-          <i class="devicon-git-plain colored" style={styles}></i>
+          <i class="devicon-git-plain colored"></i>
           <span>Git</span>
         </IconContainer>
         <IconContainer>
-          <i class="devicon-github-original colored" style={styles}></i>
+          <i class="devicon-github-original colored"></i>
           <span>Github</span>
         </IconContainer>
       </div>
       <div className="col-4">
         <IconContainer>
-          <i class="devicon-sass-original colored" style={styles}></i>
+          <i class="devicon-sass-original colored"></i>
           <span>Sass</span>
         </IconContainer>
         <IconContainer>
-          <i class="devicon-npm-original-wordmark colored" style={styles}></i>
+          <i class="devicon-npm-original-wordmark colored"></i>
           <span>NPM</span>
         </IconContainer>
         <IconContainer>
-          <i class="devicon-webpack-plain colored" style={styles}></i>
+          <i class="devicon-webpack-plain colored"></i>
           <span>Webpack</span>
         </IconContainer>
       </div>

@@ -68,22 +68,26 @@ const Project = ({title, src, summary, tech, codelink, demolink}) => {
     return (
       <Project>
         <Htwo>{title}</Htwo>
-        <ProjectImg src={src} alt="project img"></ProjectImg>
+        <ProjectImg loading="lazy" src={src} alt="project img"></ProjectImg>
         <SummaryTitle>Summary:</SummaryTitle>
         <Summary>{summary}</Summary>
         <TechTitle>Technology used:</TechTitle>
         <List1>
-            {frontTech.map(t => (
-                <li key={t}>{t}</li>
-            ))}
+          {frontTech.map((t) => (
+            <li key={t}>{t}</li>
+          ))}
         </List1>
         <List2>
-            {backTech.map(t => (
-                <li key={t}>{t}</li>
-            ))}
+          {backTech.map((t) => (
+            <li key={t}>{t}</li>
+          ))}
         </List2>
-        <CodeLink href={codelink}>See the Code</CodeLink>
-        <DemoLink href={demolink}>Live Demo</DemoLink>
+        <CodeLink target="_blank" href={codelink}>
+          See the Code
+        </CodeLink>
+        <DemoLink target="_blank" href={demolink}>
+          Live Demo
+        </DemoLink>
       </Project>
     );
 }
