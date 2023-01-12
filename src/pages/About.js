@@ -69,11 +69,36 @@ const About = () => {
     },
   };
 
+  const aboutContainerVariants = {
+    initial: {
+      opacity: 0,
+      x: "-100vh"
+    },
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+      },
+    },
+    exit: {
+      x: "-100vw",
+      transition: {
+        ease: "easeInOut",
+      },
+    },
+  };
+
   
   
 
   return (
-    <Page>
+    <Page
+      variants={aboutContainerVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <Nav />
       <Section>
         <PPicture

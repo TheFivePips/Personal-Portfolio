@@ -7,6 +7,7 @@ import Project from "../comonents/Project";
 import WorkoutBuddyImg from "../assets/WorkoutBuddy.png";
 import Colors from "../assets/Colors.png";
 import StrykThru from "../assets/StrykThru.png";
+import { motion } from "framer-motion";
 
 const Projects = () => {
 
@@ -20,8 +21,28 @@ const Projects = () => {
     padding: 2rem;
   `;
 
+  const projectsContainerVariants = {
+    initial: {
+      opacity: 0,
+      x: "100vw"
+    },
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+      }
+    },
+    exit: {
+      x: "100vw",
+      transition: {
+        ease: "easeInOut"
+      },
+    },
+  };
+
   return (
-    <div>
+    <motion.div variants={projectsContainerVariants} initial="initial" animate="animate" exit="exit">
       <Nav />
       <Title>--My Latests Projects--</Title>
       <Project
@@ -74,7 +95,7 @@ const Projects = () => {
       />
 
       <Contact />
-    </div>
+    </motion.div>
   );
 };
 
