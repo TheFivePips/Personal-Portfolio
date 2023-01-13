@@ -7,11 +7,17 @@ const Nav = () => {
 
   const Header = styled(motion.header)`
     margin: 1rem;
+    @media (width <= 500px) {
+      margin: 0.5rem
+    }
   `;
   const Nav = styled.nav`
     font-size: 1.5rem;
     display: flex;
     justify-content: space-around;
+    @media (width <= 500px) {
+     font-size: 1rem;
+    }
   `;
 
   const StyledLink = styled(Link)`

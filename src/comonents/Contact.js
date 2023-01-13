@@ -9,20 +9,30 @@ import ClipboardJS from "clipboard";
 
 const Contact = () => {
 
-  
-
   const Div = styled.div`
+    
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 1fr 1fr;
     place-items: center;
+    object-fit: contain;
+    @media (width <= 500px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr)
+    }
   `;
 
 
   const H2 = styled.h2`
     text-align: center;
     margin: 6rem;
-    grid-area: 1/1/2/3
+    grid-area: 1/1/2/3;
+    @media (width <= 500px){
+      font-size: 1.5rem;
+      margin: 3rem;
+      grid-area: 1/1/2/2
+      
+    }
   `
 
   const Section = styled.section`

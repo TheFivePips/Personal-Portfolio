@@ -11,7 +11,10 @@ import { motion} from "framer-motion";
 import FadeInWhenVisible from "../comonents/FadeInWhenVisible";
 
 const About = () => {
-  const Page = styled.div``;
+  const Page = styled.div`
+    width: 100vw
+    
+  `;
   const Section = styled.section`
     max-width: 850px;
     max-height 700px;
@@ -25,17 +28,28 @@ const About = () => {
     align-items: center;
     justify-content: center;
     position: relative;
+    @media (width <= 500px){
+      width: 95vw;
+      padding: 2rem 0;
+    }
     
   `;
   const PPicture = styled(motion.img)`
     height: 100%;
     width: 100%;
     border-radius: 1rem;
+    @media (width <= 500px) {
+      width: 100%;
+    }
   `;
   const Para = styled(motion.p)`
     line-height: 2.5rem;
     text-align: center;
     margin: 2rem;
+    @media (width <= 500px) {
+      margin: 0.5rem;
+      line-height: 1.5rem;
+    }
   `;
 
   const sideSlideRVariants = {
@@ -146,8 +160,8 @@ const About = () => {
               Coming from an emergency medicine background is a drastic change
               in pace and environmet,
               <br /> but as a life-long-learner,
-              <br /> programming offers endless intellectual
-              curiosity and exploration.
+              <br /> programming offers endless intellectual curiosity and
+              exploration.
               <br />
               <br />
               <strong>
@@ -159,8 +173,10 @@ const About = () => {
             <TechStack />
           </FadeInWhenVisible>
           <br />
-          And I am learning more everyday! Checkout my recent work{" "}
-          <Link to="/projects">here!</Link>
+          <Para>
+            And I am learning more everyday! Checkout my recent work{" "}
+            <Link to="/projects">here!</Link>
+          </Para>
         </section>
       </FadeInWhenVisible>
       <FadeInWhenVisible>
