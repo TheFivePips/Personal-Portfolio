@@ -146,7 +146,7 @@ const About = () => {
               Coming from an emergency medicine background is a drastic change
               in pace and environmet,
               <br /> but as a life-long-learner,
-              <br /> the world of programming offers endless intellectual
+              <br /> programming offers endless intellectual
               curiosity and exploration.
               <br />
               <br />
