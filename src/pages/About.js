@@ -32,6 +32,11 @@ const About = () => {
       width: 95vw;
       padding: 2rem 0;
     }
+    @media (width > 1200px) {
+      grid-gap: 10rem;
+      margin: 2rem auto;
+    }
+    
     
   `;
   const PPicture = styled(motion.img)`
@@ -40,6 +45,20 @@ const About = () => {
     border-radius: 1rem;
     @media (width <= 500px) {
       width: 100%;
+      
+    }
+    @media (width > 1200px){
+      width: 90%
+    }
+  `;
+  const LPicture = styled.img`
+    border-radius: 1rem;
+    @media (width <= 500px) {
+      width: 100%;
+      margin: 1rem
+    }
+    @media (width > 1200px) {
+      width: 60%;
     }
   `;
   const Para = styled(motion.p)`
@@ -135,7 +154,9 @@ const About = () => {
           </Para>
           <PPicture loading="lazy" src={Paramedic} alt="My old badge" />
         </Section>
-        <Para>Now I build cool projects</Para>
+        <Para>
+          <strong>Now I build cool projects</strong>
+        </Para>
       </FadeInWhenVisible>
       <FadeInWhenVisible>
         <section
@@ -146,12 +167,7 @@ const About = () => {
             alignItems: "center",
           }}
         >
-          <PPicture
-            loading="lazy"
-            src={MeowWolf}
-            alt="me at meow wolf"
-            style={{ width: "80vw", margin: "2rem" }}
-          />
+          <LPicture loading="lazy" src={MeowWolf} alt="me at meow wolf" />
           <FadeInWhenVisible>
             <Para>
               I have spent almost two years teaching myself how to build web

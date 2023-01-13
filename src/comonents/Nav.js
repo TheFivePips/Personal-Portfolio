@@ -8,7 +8,10 @@ const Nav = () => {
   const Header = styled(motion.header)`
     margin: 1rem;
     @media (width <= 500px) {
-      margin: 0.5rem
+      margin: 0.5rem;
+    }
+    @media (width > 1200px) {
+      margin: 2.5rem;
     }
   `;
   const Nav = styled.nav`
@@ -16,7 +19,10 @@ const Nav = () => {
     display: flex;
     justify-content: space-around;
     @media (width <= 500px) {
-     font-size: 1rem;
+      font-size: 1rem;
+    }
+    @media (width > 1200px) {
+      font-size: 2rem;
     }
   `;
 

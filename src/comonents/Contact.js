@@ -90,7 +90,7 @@ const Contact = () => {
         <p>315-316-7989</p>
       </Section>
       <Section>
-        <a href="https://github.com/TheFivePips">
+        <a href="https://github.com/TheFivePips" aria-label="Link to my github page">
           <i
             class="devicon-github-original-wordmark"
             style={{ fontSize: "3rem" }}
@@ -98,7 +98,7 @@ const Contact = () => {
         </a>
       </Section>
       <Section>
-        <a href="https://www.linkedin.com/in/sam-gardner-b012b2a3/">
+        <a href="https://www.linkedin.com/in/sam-gardner-b012b2a3/" aria-label="Link to my linkedin page">
           <i class="devicon-linkedin-plain" style={{ fontSize: "3rem" }}></i>
         </a>
       </Section>
