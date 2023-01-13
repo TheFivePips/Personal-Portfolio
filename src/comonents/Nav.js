@@ -22,7 +22,9 @@ const Nav = () => {
       font-size: 1rem;
     }
     @media (width > 1200px) {
+      margin-left: 3.5rem;
       font-size: 2rem;
+      width: 90%;
     }
   `;
 

@@ -69,6 +69,10 @@ const About = () => {
       margin: 0.5rem;
       line-height: 1.5rem;
     }
+    @media (width > 1200px) {
+      line-height: 3.5rem;
+      font-size: 1.5rem
+    }
   `;
 
   const sideSlideRVariants = {
@@ -83,6 +87,14 @@ const About = () => {
         duration: 1,
         type: "spring",
         bounce: 0.2,
+        delay: 0.3,
+      },
+    },
+    exit: {
+      x: "-100vw",
+      transition: {
+        ease: "easeInOut",
+        duration: 0.7,
       },
     },
   };
@@ -98,6 +110,14 @@ const About = () => {
         duration: 1,
         type: "spring",
         bounce: 0.2,
+        delay: 0.3,
+      },
+    },
+    exit: {
+      x: "-100vw",
+      transition: {
+        ease: "easeInOut",
+        duration: 0.7,
       },
     },
   };
@@ -105,19 +125,20 @@ const About = () => {
   const aboutContainerVariants = {
     initial: {
       opacity: 0,
-      x: "-100vh"
+      x: "-100vw",
     },
     animate: {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 1,
+        duration: 1.6,
       },
     },
     exit: {
       x: "-100vw",
       transition: {
         ease: "easeInOut",
+        duration: 0.7,
       },
     },
   };
@@ -140,8 +161,14 @@ const About = () => {
           variants={sideSlideLVariants}
           initial="initial"
           animate="animate"
+          exit="exit"
         />
-        <Para variants={sideSlideRVariants} initial="initial" animate="animate">
+        <Para
+          variants={sideSlideRVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+        >
           Hello, there! My name is Sam <br />I am a Full-Stack Web Developer
         </Para>
       </Section>

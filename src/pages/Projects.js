@@ -19,25 +19,31 @@ const Projects = () => {
     text-align: center;
     width: 50vw;
     margin: 0 auto;
-    padding: 2rem;
+    padding-top: 2rem;
+    @media (width <=500px){
+      font-size: 0.75rem;
+    }
   `;
 
   const projectsContainerVariants = {
     initial: {
       opacity: 0,
-      x: "100vw"
+      x: "100vw",
     },
     animate: {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 1,
-      }
+        duration: 1.6,
+        type: "spring",
+        bounce: 0.2,
+      },
     },
     exit: {
       x: "100vw",
       transition: {
-        ease: "easeInOut"
+        ease: "easeInOut",
+        duration: 0.7,
       },
     },
   };
@@ -51,9 +57,20 @@ const Projects = () => {
     >
       <Nav />
       <Title
-        initial={{ x: "-200vw" }}
-        animate={{ x: 0 }}
-        transition={{ duration: 1 }}
+        initial={{
+          x: "-200vw",
+          opacity: 0 
+        }}
+        animate={{ 
+          x: 0,
+          opacity: 1 
+        }}
+        transition={{
+          duration: 1,
+          delay: 0.3,
+          type: "spring",
+          bounce: 0.2
+        }}
       >
         --My Latests Projects--
       </Title>

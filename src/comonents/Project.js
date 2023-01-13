@@ -6,59 +6,103 @@ const Project = ({title, src, summary, tech, codelink, demolink}) => {
 
     const Project = styled.section`
       // border: 1px solid black;
-      width: 95vw;
-      height: 95vh;
+      width: 95%;
       margin: 1rem auto;
-      display: grid;
-      grid-template-rows: 1fr 10fr 1fr 2fr 1fr 2fr 1fr;
-      grid-template-columns: 1fr 1fr;
+      padding: 1rem 0;
+      display: flex;
+      flex-direction: column;
       border-bottom: 1px solid white;
+      @media( width > 1200px){
+        width: 75%;
+        margin: 2rem auto
+        padding: 2rem 0;
+      }
     
     
     `;
     const Htwo = styled.h2`
-      grid-area: 1/1/2/3;
-    `
+      margin-bottom: 1rem;
+      @media (width > 1200px) {
+        font-size: 2rem;
+        margin-top: 1.5rem
+      }
+    `;
 
     const ProjectImg = styled.img`
       width: 100%;
-      height: 100%;
-      grid-area: 2/1/3/3;
 
   `
     const SummaryTitle = styled.h3`
-      grid-area: 3/1/4/3;
-      margin-left: 1rem;
-  
-    `
+    @media (width > 1200px){
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+    @media (500px < width < 1200px){
+        margin-top: 2rem;
+      }
+      
+    `;
     const Summary = styled.p`
-      grid-area: 4/1/5/3;
-      margin-left: 1rem;
+      margin: 1rem 1rem;
+      @media (width > 1200px) {
+        font-size: 1.5rem;
+      }
+      
     `;
     const TechTitle = styled.h3`
-      grid-area: 5/1/6/3;
-      margin-left: 1rem;
+      @media (width > 1200px) {
+        font-size: 2rem;
+      }
     `;
-    const List1 = styled.ul`
-      grid-area: 6/1/7/2;
-      font-size: 0.85rem;
-      margin: 0 4rem;
-
+    const TechContainer = styled.div`
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
     `
-    const List2 = styled.ul`
-      grid-area: ; 6/2/7/3;
-      font-size: 0.85rem;
+    const List1 = styled.ul`
+      font-size: 0.7rem;
       margin: 0 4rem;
-     `;
+      @media (width > 500px) {
+        font-size: 1.2rem;
+      }
+    `;
+    const List2 = styled.ul`
+      font-size: 0.7rem;
+      margin: 0 4rem;
+      @media (width > 1200px) {
+        font-size: 1.2rem;
+      }
+      @media (width > 500px) {
+        font-size: 1.2rem;
+      }
+    `;
+    const LinkContainer = styled.div`
+      width: 90%;
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-around;
+      @media(width > 1200px) {
+        width: 95%;
+      }
+    `
 
     const CodeLink = styled(motion.a)`
-      grid-area: 7/1/8/2;
-      margin: 1rem 2rem;
+      font-size: 1.5rem;
+      @media(width <=500px){
+        font-size: 1rem;
+      }
+      @media(500px < width < 1200px){
+        font-size: 1.3rem
+      }
     `;
     const DemoLink = styled(motion.a)`
-      grid-area: 7/2/8/3;
-      margin: 1rem 4rem;
-
+      font-size: 1.5rem;
+      @media (width <=500px) {
+        font-size: 1rem;
+      }
+      @media(500px < width < 1200px){
+        font-size: 1.3rem
+      }
     `;
     const frontTech = tech.slice(0,Math.round((tech.length/2)))
     const backTech = tech.slice(Math.round(tech.length/2))
@@ -71,42 +115,48 @@ const Project = ({title, src, summary, tech, codelink, demolink}) => {
         <SummaryTitle>Summary:</SummaryTitle>
         <Summary>{summary}</Summary>
         <TechTitle>Technology used:</TechTitle>
-        <List1>
-          {frontTech.map((t) => (
-            <li key={t}>{t}</li>
-          ))}
-        </List1>
-        <List2>
-          {backTech.map((t) => (
-            <li key={t}>{t}</li>
-          ))}
-        </List2>
-        <CodeLink
-          target="_blank"
-          href={codelink}
-          whileHover={{
-            scale: 1.025,
-            textShadow: "0 0 1px white",
-            transition: {
-              duration: 0.7,
-            },
-          }}
-        >
-          See the Code
-        </CodeLink>
-        <DemoLink
-          target="_blank"
-          href={demolink}
-          whileHover={{
-            scale: 1.025,
-            textShadow: "0 0 1px white",
-            transition: {
-              duration: 0.7,
-            },
-          }}
-        >
-          Live Demo
-        </DemoLink>
+        <TechContainer>
+          <List1>
+            {frontTech.map((t) => (
+              <li key={t}>{t}</li>
+            ))}
+          </List1>
+          <List2>
+            {backTech.map((t) => (
+              <li key={t}>{t}</li>
+            ))}
+          </List2>
+        </TechContainer>
+        <TechTitle>Links:</TechTitle>
+        <LinkContainer>
+          {" "}
+          <CodeLink
+            target="_blank"
+            href={codelink}
+            whileHover={{
+              scale: 1.025,
+              textShadow: "0 0 1px white",
+              transition: {
+                duration: 0.7,
+              },
+            }}
+          >
+            The Code
+          </CodeLink>
+          <DemoLink
+            target="_blank"
+            href={demolink}
+            whileHover={{
+              scale: 1.025,
+              textShadow: "0 0 1px white",
+              transition: {
+                duration: 0.7,
+              },
+            }}
+          >
+            Live Demo
+          </DemoLink>
+        </LinkContainer>
       </Project>
     );
 }
