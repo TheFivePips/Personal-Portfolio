@@ -10,8 +10,11 @@ import Colors from "../assets/Colors.png";
 import StrykThru from "../assets/StrykThru.png";
 import { motion } from "framer-motion";
 import FadeInWhenVisible from "../comonents/FadeInWhenVisible";
-
+import UseTitle from "../hooks/useTitle";
 const Projects = () => {
+
+  UseTitle("TheFivePips - Projects");
+  
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);

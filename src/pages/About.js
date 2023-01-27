@@ -9,8 +9,10 @@ import TechStack from "../comonents/TechStack";
 import Contact from "../comonents/Contact";
 import { motion} from "framer-motion";
 import FadeInWhenVisible from "../comonents/FadeInWhenVisible";
+import UseTitle from "../hooks/useTitle";
 
 const About = () => {
+  UseTitle("TheFivePips - About")
   const Page = styled.div`
     width: 100vw
     
