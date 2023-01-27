@@ -39,14 +39,13 @@ const TechStack = () => {
 //  should add in jest
   return (
     <StackContainer>
-      
       <IconContainer>
-        <i class="devicon-html5-plain colored" ></i>
+        <i class="devicon-html5-plain colored"></i>
         <span>HTML5</span>
       </IconContainer>
 
       <IconContainer>
-        <i class="devicon-css3-plain colored" ></i>
+        <i class="devicon-css3-plain colored"></i>
         <span>CSS</span>
       </IconContainer>
 
@@ -54,14 +53,14 @@ const TechStack = () => {
         <i class="devicon-javascript-plain colored"></i>
         <span>JavaScript</span>
       </IconContainer>
-  
+
       <IconContainer>
         <i class="devicon-react-original colored"></i>
         <span>React</span>
       </IconContainer>
 
       <IconContainer>
-        <i class="devicon-express-original"></i>
+        <i class="devicon-express-original colored"></i>
         <span>Express</span>
       </IconContainer>
 
@@ -69,7 +68,7 @@ const TechStack = () => {
         <i class="devicon-mongodb-plain colored"></i>
         <span>MongoDB</span>
       </IconContainer>
-    
+
       <IconContainer>
         <i class="devicon-nodejs-plain colored"></i>
         <span>Node</span>
@@ -84,7 +83,7 @@ const TechStack = () => {
         <i class="devicon-github-original colored"></i>
         <span>Github</span>
       </IconContainer>
-    
+
       <IconContainer>
         <i class="devicon-sass-original colored"></i>
         <span>Sass</span>
@@ -100,6 +99,20 @@ const TechStack = () => {
         <span>Webpack</span>
       </IconContainer>
 
+      <IconContainer>
+        <i class="devicon-redux-original colored"></i>
+        <span>Redux</span>
+      </IconContainer>
+
+      <IconContainer>
+        <i class="devicon-bootstrap-plain colored"></i>
+        <span>Bootstrap</span>
+      </IconContainer>
+
+      <IconContainer>
+        <i class="devicon-materialui-plain colored"></i>
+        <span>Material UI</span>
+      </IconContainer>
     </StackContainer>
   );
 }
