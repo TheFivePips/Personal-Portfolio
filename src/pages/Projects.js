@@ -4,6 +4,7 @@ import Contact from "../comonents/Contact";
 import styled from "styled-components";
 import Project from "../comonents/Project";
 
+import techNotes from '../assets/techNotes.png'
 import WorkoutBuddyImg from "../assets/WorkoutBuddy.png";
 import Colors from "../assets/Colors.png";
 import StrykThru from "../assets/StrykThru.png";
@@ -59,21 +60,43 @@ const Projects = () => {
       <Title
         initial={{
           x: "-200vw",
-          opacity: 0 
+          opacity: 0,
         }}
-        animate={{ 
+        animate={{
           x: 0,
-          opacity: 1 
+          opacity: 1,
         }}
         transition={{
           duration: 1,
           delay: 0.3,
           type: "spring",
-          bounce: 0.2
+          bounce: 0.2,
         }}
       >
         --My Latests Projects--
       </Title>
+      <FadeInWhenVisible>
+        <Project
+          title="TechNotes"
+          src={techNotes}
+          summary="Ticket app for employees of DanD's computer repair shop. It is a MERN stack application that allows employees, depending on their credentials, to view, create, update, and delete employee's and their respective tickets(notes)."
+          tech={[
+            "React",
+            "MongoDB",
+            "Express",
+            "Mongoose",
+            "Postman",
+            "Redux Toolkit",
+            "RTK Query",
+            "Node",
+            "bcrypt",
+            "jsonwebtokens",
+            "React-router-v6",
+          ]}
+          codelink="https://github.com/TheFivePips/Tech-Notes-Frontend"
+          demolink="https://technotes-5j75.onrender.com"
+        />
+      </FadeInWhenVisible>
       <FadeInWhenVisible>
         <Project
           title="Workout Buddy"
