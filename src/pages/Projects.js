@@ -4,10 +4,11 @@ import Contact from "../comonents/Contact";
 import styled from "styled-components";
 import Project from "../comonents/Project";
 
-import techNotes from '../assets/techNotes.png'
-import WorkoutBuddyImg from "../assets/WorkoutBuddy.png";
-import Colors from "../assets/Colors.png";
-import StrykThru from "../assets/StrykThru.png";
+// import techNotes from '../assets/techNotes.png'
+import technotes from '../assets/techNotes.gif'
+import WorkoutBuddygif from "../assets/workoutBuddy.gif";
+import Colors from "../assets/colors.gif";
+import StrykThru from "../assets/strykthru.gif";
 import { motion } from "framer-motion";
 import FadeInWhenVisible from "../comonents/FadeInWhenVisible";
 import UseTitle from "../hooks/useTitle";
@@ -81,7 +82,7 @@ const Projects = () => {
       <FadeInWhenVisible>
         <Project
           title="TechNotes"
-          src={techNotes}
+          src={technotes}
           summary="Ticket app for employees of DanD's computer repair shop. It is a MERN stack application that allows employees, depending on their credentials, to view, create, update, and delete employee's and their respective tickets(notes)."
           tech={[
             "React",
@@ -103,7 +104,7 @@ const Projects = () => {
       <FadeInWhenVisible>
         <Project
           title="Workout Buddy"
-          src={WorkoutBuddyImg}
+          src={WorkoutBuddygif}
           summary="Exercise tracker App that allows a user to log their exercises by name and keep a record of the exercises weight, repititons, and number of sets. It is a full stack application and makes use of authorization and validation. "
           tech={[
             "React",
