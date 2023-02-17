@@ -116,7 +116,7 @@ const TechStack = () => {
 
       <IconContainer>
         <i class="devicon-typescript-plain colored"></i>
-        <span>Material UI</span>
+        <span>Typescript</span>
       </IconContainer>
     </StackContainer>
   );
