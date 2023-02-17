@@ -113,6 +113,11 @@ const TechStack = () => {
         <i class="devicon-materialui-plain colored"></i>
         <span>Material UI</span>
       </IconContainer>
+
+      <IconContainer>
+        <i class="devicon-typescript-plain colored"></i>
+        <span>Material UI</span>
+      </IconContainer>
     </StackContainer>
   );
 }
