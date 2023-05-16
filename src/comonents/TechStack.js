@@ -120,7 +120,7 @@ const TechStack = () => {
       </IconContainer>
 
       <IconContainer>
-        <i class="devicon-python-plain"></i>
+        <i class="devicon-python-plain colored"></i>
         <span>Python</span>
       </IconContainer>
     </StackContainer>

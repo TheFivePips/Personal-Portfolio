@@ -219,11 +219,11 @@ const About = () => {
           </FadeInWhenVisible>
           <br />
           <Para>
-            <strong>Certifications:</strong>
+            <strong style={{fontsize: "2.5rem"}}>Certifications:</strong>
             <br />
-            -CompTIA A+
+            <strong style={{fontsize: "1.5rem"}}>-CompTIA A+</strong>
             <br />
-            -Google IT Technical Support
+            <strong style={{fontsize: "1.5rem"}}>-Google IT Technical Support</strong>
             <br />
             <br />
             <br />

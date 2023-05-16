@@ -83,7 +83,7 @@ const Projects = () => {
         <Project
           title="TechNotes"
           src={technotes}
-          summary="Ticket app for employees of DanD's computer repair shop. It is a MERN stack application that allows employees, depending on their credentials, to view, create, update, and delete employee's and their respective tickets(notes)."
+          summary="Ticket app for employees of DanD's computer repair shop. It is a MERN stack application that allows employees, depending on their credentials, to view, create, update, and delete employee's and their respective tickets."
           tech={[
             "React",
             "MongoDB",
@@ -136,7 +136,7 @@ const Projects = () => {
         <Project
           title="Workout Buddy"
           src={WorkoutBuddygif}
-          summary="Exercise tracker App that allows a user to log their exercises by name and keep a record of the exercises weight, repititons, and number of sets. It is a full stack application and makes use of authorization and validation. "
+          summary="Exercise tracker App that allows a user to log their exercises by name and keep a record of the exercise's weight, repetitons, and number of sets. It is a full stack application and requires authorization and validation. "
           tech={[
             "React",
             "MongoDB",
@@ -153,6 +153,7 @@ const Projects = () => {
           ]}
           codelink="https://github.com/TheFivePips/Exercise-Tracker"
         />
+        <p>Live demo Coming soon!</p>
       </FadeInWhenVisible>
       <FadeInWhenVisible>
         <Contact />
