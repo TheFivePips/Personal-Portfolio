@@ -103,29 +103,6 @@ const Projects = () => {
       </FadeInWhenVisible>
       <FadeInWhenVisible>
         <Project
-          title="Workout Buddy"
-          src={WorkoutBuddygif}
-          summary="Exercise tracker App that allows a user to log their exercises by name and keep a record of the exercises weight, repititons, and number of sets. It is a full stack application and makes use of authorization and validation. "
-          tech={[
-            "React",
-            "MongoDB",
-            "Express",
-            "Mongoose",
-            "Postman",
-            "Context",
-            "Node",
-            "bcrypt",
-            "jsonwebtokens",
-            "valdator.js",
-            "date-fns",
-            "React-router-v6",
-          ]}
-          codelink="https://github.com/TheFivePips/Exercise-Tracker"
-          demolink="Coming soon"
-        />
-      </FadeInWhenVisible>
-      <FadeInWhenVisible>
-        <Project
           title="PalettePicker"
           src={Colors}
           summary="This app allows a user to create beautiful color palettes. It features drag and drop elements, a color shade picker, and supports multiple color formats."
@@ -153,6 +130,28 @@ const Projects = () => {
           tech={["JavaScript", "date-fns", "Webpack", "CSS", "UUID"]}
           codelink="https://github.com/TheFivePips/Todo-Project"
           demolink="https://thefivepips.github.io/Todo-Project/"
+        />
+      </FadeInWhenVisible>
+      <FadeInWhenVisible>
+        <Project
+          title="Workout Buddy"
+          src={WorkoutBuddygif}
+          summary="Exercise tracker App that allows a user to log their exercises by name and keep a record of the exercises weight, repititons, and number of sets. It is a full stack application and makes use of authorization and validation. "
+          tech={[
+            "React",
+            "MongoDB",
+            "Express",
+            "Mongoose",
+            "Postman",
+            "Context",
+            "Node",
+            "bcrypt",
+            "jsonwebtokens",
+            "valdator.js",
+            "date-fns",
+            "React-router-v6",
+          ]}
+          codelink="https://github.com/TheFivePips/Exercise-Tracker"
         />
       </FadeInWhenVisible>
       <FadeInWhenVisible>

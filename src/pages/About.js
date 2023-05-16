@@ -19,7 +19,7 @@ const About = () => {
   `;
   const Section = styled.section`
     max-width: 850px;
-    max-height 700px;
+    max-height 650px;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
@@ -64,16 +64,16 @@ const About = () => {
     }
   `;
   const Para = styled(motion.p)`
-    line-height: 2.5rem;
+    line-height: 2.3rem;
     text-align: center;
     margin: 2rem;
     @media (width <= 500px) {
       margin: 0.5rem;
-      line-height: 1.5rem;
+      line-height: 1.3rem;
     }
     @media (width > 1200px) {
-      line-height: 3.5rem;
-      font-size: 1.5rem
+      line-height: 3.3rem;
+      font-size: 1.3rem
     }
   `;
 
@@ -208,6 +208,7 @@ const About = () => {
               <br /> but as a life-long-learner,
               <br /> tech offers endless intellectual curiosity and exploration.
               <br />
+              <br />
               <strong>
                 Here are some of the technologies I am now proficient with:
               </strong>
@@ -224,7 +225,9 @@ const About = () => {
             <br />
             -Google IT Technical Support
             <br />
-            And I am learning more  everyday! Checkout my recent work{" "}
+            <br />
+            <br />
+            And I am learning more everyday! Checkout my recent work{" "}
             <Link to="/projects">here!</Link>
           </Para>
         </section>
