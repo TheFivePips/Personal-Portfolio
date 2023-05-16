@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Nav from "../comonents/Nav";
-import Coffee from "../assets/coffee.jpg";
+import UpdatedPic from "../assets/updatedPic.jpg";
 import Paramedic from "../assets/paramedic.jpg";
 import MeowWolf from "../assets/meowwolf.jpg";
 import styled from "styled-components";
@@ -158,7 +158,7 @@ const About = () => {
       <Nav />
       <Section>
         <PPicture
-          src={Coffee}
+          src={UpdatedPic}
           alt="picture of me"
           variants={sideSlideLVariants}
           initial="initial"
@@ -171,7 +171,8 @@ const About = () => {
           animate="animate"
           exit="exit"
         >
-          Hello, there! My name is Sam <br />I am a Full-Stack Web Developer
+          Hello, there! My name is Sam <br />I am a Full-Stack Web Developer and
+          IT Professional
         </Para>
       </Section>
       <FadeInWhenVisible>
@@ -199,15 +200,13 @@ const About = () => {
           <LPicture loading="lazy" src={MeowWolf} alt="me at meow wolf" />
           <FadeInWhenVisible>
             <Para>
-              I have spent almost two years teaching myself how to build web
-              applications. <br />
+              I have spent two years teaching myself how to build web
+              applications and earning IT certifications. <br />
               <br />
               Coming from an emergency medicine background is a drastic change
               in pace and environmet,
               <br /> but as a life-long-learner,
-              <br /> programming offers endless intellectual curiosity and
-              exploration.
-              <br />
+              <br /> tech offers endless intellectual curiosity and exploration.
               <br />
               <strong>
                 Here are some of the technologies I am now proficient with:
@@ -219,7 +218,13 @@ const About = () => {
           </FadeInWhenVisible>
           <br />
           <Para>
-            And I am learning more everyday! Checkout my recent work{" "}
+            <strong>Certifications:</strong>
+            <br />
+            -CompTIA A+
+            <br />
+            -Google IT Technical Support
+            <br />
+            And I am learning more  everyday! Checkout my recent work{" "}
             <Link to="/projects">here!</Link>
           </Para>
         </section>
